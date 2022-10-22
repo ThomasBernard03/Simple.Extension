@@ -42,6 +42,17 @@ bool isNull = myEnumerable.IsNullOrEmpty(); // return false
 bool isNotNull = myEnumerable.IsNotNullOrEmpty(); // return true
 ````
 
+### Simple.Extension.Date
+
+Here are the different methods added by Simple.Extension.Date :
+
+```C#
+var isBetwenn = myDate.IsBetween(firstDate, LastDate); // retrun a boolean
+var firstDayOfTheWekk = myDate.GetFirstDayOfWeek(); // Return the first day of one day
+var firstDayOfTheWekk = myDate.GetLastDayOfWeek(); // Return the last day of one day
+````
+
+
 ## That's all ! ⭐
 
 If you want to help the project, you can put a star on Github. If you have any problems, please let me know by creating an issue on Github or by asking for a pull request.
