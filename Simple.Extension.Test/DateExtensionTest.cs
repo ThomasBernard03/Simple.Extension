@@ -11,7 +11,7 @@ public class DateExtensionTest
     }
 
     [Test]
-    public void IsBetweenTestSutLower()
+    public void IsBetweenTestSutLowerOk()
     {
         var rangeBeggin = new DateTime(2022, 10, 03);
         var rangeEnd = new DateTime(2023, 10, 10);
@@ -21,7 +21,7 @@ public class DateExtensionTest
     }
     
     [Test]
-    public void IsBetweenTestSutSup()
+    public void IsBetweenTestSutSupOk()
     {
         var rangeBeggin = new DateTime(2022, 10, 03);
         var rangeEnd = new DateTime(2023, 10, 10);
@@ -39,5 +39,17 @@ public class DateExtensionTest
         
         Assert.IsTrue(sut.IsBetween(rangeBeggin, rangeEnd), "This test must return true because sut is <> rangeBeggin and rangeEnd");
     }
+    
+    [Test]
+    public void FirstAndLastDayOfTheWeekOk()
+    {
+        var sut = new DateTime(2022, 10, 23);
+        var fistDayOfTheWeek = sut.GetFirstDayOfWeek();
+        var lastDayOfTheWeek = sut.GetLastDayOfWeek();
+        
+        Assert.IsTrue(fistDayOfTheWeek.Ticks == new DateTime(2022, 10, 17).Ticks);
+        Assert.IsTrue(lastDayOfTheWeek.Ticks == new DateTime(2022, 10, 23).Ticks);
+    }
+    
     
 }
